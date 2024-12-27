@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+export LOCAL_QBIT_HOST="FILL_ME"
+export LOCAL_QBIT_USER="FILL_ME"
+export LOCAL_QBIT_PASSWORD="FILL_ME"
+
+# set to qbittorrent directory locally
+export LOCAL_QBIT_DIR="/data/torrent"
+# set to the name of the qbittorrent seedbox in sonarr/radarr
+export SEEDBOX_QBIT_NAME="qbittorrent-seedbox"
+
+export SEEDBOX_QBIT_HOST="FILL_ME"
+export SEEDBOX_QBIT_USER="FILL_ME"
+export SEEDBOX_QBIT_PASSWORD="FILL_ME"
+
+export CROSS_SEED_HOST="FILL_ME"
+export CROSS_SEED_APIKEY="FILL_ME"
+
+# set this if you want logging (currently not really used)
+export INJECT_TORRENTS_LOG_FILE="/config/inject-seedbox-torrents.log"
+
+INJECT_SEEDBOX_TORRENTS_SCRIPT_PATH="${INJECT_SEEDBOX_TORRENTS_SCRIPT_PATH:-/arr-connect-scripts/inject-seedbox-torrents/inject-seedbox-torrents.py}"
+
+$INJECT_SEEDBOX_TORRENTS_SCRIPT_PATH
+
