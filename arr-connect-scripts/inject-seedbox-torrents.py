@@ -13,6 +13,7 @@ import shutil
 import qbittorrentapi
 import requests
 import logging
+import time
 
 logger = logging.getLogger('inject-seedbox-torrents')
 logger.setLevel(logging.DEBUG)
@@ -109,6 +110,9 @@ def main():
     qb_local.torrents_add(torrent_files=torrent_file, save_path=save_path)
 
     if CROSS_SEED_HOST and CROSS_SEED_APIKEY:
+        # wait a bit so that the torrent was successfully added to qbittorrent-local
+        time.sleep(5)
+
         # send it to cross-seed locally
         headers = {
             "X-Api-Key": CROSS_SEED_APIKEY,
