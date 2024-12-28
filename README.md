@@ -31,5 +31,7 @@ Create a bash script in the same directory as `inject-seedbox-torrents.sh.templa
 
 ## Step 3
 
-1. Add the script in Radarr under `Settings -> Connect` as `Custom Script` with `On File Import` & `On File Upgrade` as trigger.
-2. Add the script in Sonarr under `Settings -> Connect` as `Custom Script` with `On Import Complete` as trigger.
+Add the script `/arr-connect-scripts/inject-seedbox-torrents/inject-seedbox-torrents.sh`:
+
+1. In Radarr under `Settings -> Connect` as `Custom Script` with `On File Import` & `On File Upgrade` as trigger.
+2. In Sonarr under `Settings -> Connect` as `Custom Script` with `On Import Complete` as trigger.
