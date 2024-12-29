@@ -110,8 +110,8 @@ def main():
     qb_local.torrents_add(torrent_files=torrent_file, save_path=save_path)
 
     if CROSS_SEED_HOST and CROSS_SEED_APIKEY:
-        # wait a bit so that the torrent was successfully added to qbittorrent-local
-        time.sleep(5)
+        # wait a bit so that the torrent was successfully added (and checked) in qbittorrent-local
+        time.sleep(60)
 
         # send it to cross-seed locally
         headers = {
